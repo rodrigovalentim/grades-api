@@ -25,11 +25,7 @@ app.use(express.json());
 //define o dominio de origem para consumo do servico
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(
-  cors({
-    origin: 'http://localhost:8080',
-  })
-);
+app.use(cors());
 
 app.use(gradeRouter);
 

@@ -99,6 +99,7 @@ const removeAll = async (req, res) => {
     res.send({
       message: `Grades excluidos`,
     });
+    console.test('')
     logger.info(`DELETE /grade`);
   } catch (error) {
     res.status(500).send({ message: 'Erro ao excluir todos as Grades' });
