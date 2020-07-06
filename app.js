@@ -33,6 +33,6 @@ app.get('/', (req, res) => {
   res.send('API em execucao');
 });
 
-app.listen(process.env.API_PORT || 8081, () => {
-  logger.info(`Servidor backend em execucao na porta ${process.env.API_PORT || 8081}`);
+app.listen(process.env.PORT || 8081, () => {
+  logger.info(`Servidor backend em execucao na porta ${process.env.PORT || 8081}`);
 });
