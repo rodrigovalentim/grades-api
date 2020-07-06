@@ -1,7 +1,11 @@
 import mongoose from 'mongoose';
+import gradesModel from './gradesModel.js';
 
-const db = {};
-db.mongoose = mongoose;
-db.url = process.env.MONGODB;
+const db = {
+  mongoose: mongoose,
+  url: process.env.MONGODB,
+};
+
+db.grades = gradesModel(mongoose);
 
 export { db };

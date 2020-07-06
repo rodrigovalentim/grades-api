@@ -21,7 +21,7 @@ import { db } from './models/index.js';
 })();
 
 const app = express();
-
+app.use(express.json());
 //define o dominio de origem para consumo do servico
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,6 +37,6 @@ app.get('/', (req, res) => {
   res.send('API em execucao');
 });
 
-app.listen(process.env.PORT || 8081, () => {
-  logger.info(`Servidor em execucao na porta ${process.env.PORT}`);
+app.listen(process.env.API_PORT || 8081, () => {
+  logger.info(`Servidor backend em execucao na porta ${process.env.API_PORT || 8081}`);
 });
